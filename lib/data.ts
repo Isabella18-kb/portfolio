@@ -16,8 +16,8 @@ export const profile = {
   manifesto:
     "Transformo las necesidades de cada negocio en soluciones digitales que impulsan sus ventas y simplifican su día a día, creando webs y herramientas a medida.",
   about: [
-    "Soy desarrolladora web y Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Me encargo de cada proyecto de principio a fin: analizo lo que necesita el negocio, diseño la solución y la desarrollo hasta dejarla publicada y funcionando.",
-    "He trabajado en proyectos reales, como un CRM con asistente de inteligencia artificial, una plataforma de captación de clientes y varias tiendas online. Busco incorporarme a un equipo donde aportar valor desde el primer día y seguir creciendo profesionalmente.",
+    "Desarrolladora web con formación como Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Gestiono cada proyecto de forma integral: desde el análisis de requisitos y la definición de la solución hasta su desarrollo, despliegue y puesta en producción.",
+    "Cuento con experiencia en proyectos reales, entre ellos un CRM con asistente de inteligencia artificial, una plataforma de captación de clientes y diversas soluciones de comercio electrónico. Mi objetivo es incorporarme a un equipo en el que aportar valor desde el primer día y continuar mi desarrollo profesional.",
   ],
   email: "isabellaleon2207@gmail.com",
   facts: [
