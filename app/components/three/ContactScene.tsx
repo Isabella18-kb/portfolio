@@ -17,9 +17,9 @@ function Objects() {
     <>
       <Float speed={1.8} rotationIntensity={0.8} floatIntensity={narrow ? 0.6 : 1.2}>
         <CursorArrow
-          position={narrow ? [width * 0.22, -height * 0.3, 1] : [4.2 * k, 0.6, 1]}
+          position={narrow ? [width * 0.3, -height * 0.37, 1] : [4.2 * k, 0.6, 1]}
           rotation={[0.2, -0.5, 0.5]}
-          scale={1.3 * s}
+          scale={narrow ? 0.85 * s : 1.3}
         />
       </Float>
       <Float speed={2.2} rotationIntensity={1.2} floatIntensity={narrow ? 0.6 : 1.4}>
