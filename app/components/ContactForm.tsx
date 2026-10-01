@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { profile } from "@/lib/data";
 import { sendMessage } from "@/lib/sendMessage";
 
@@ -17,6 +17,17 @@ export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [name, setName] = useState("");
+
+  // Al volver a la web, el navegador (sobre todo en el móvil) puede enseñar la página tal como se dejó,
+  // sin recargarla, y con ella el agradecimiento del último envío. Si es así, el formulario vuelve a
+  // empezar vacío.
+  useEffect(() => {
+    const reset = (e: PageTransitionEvent) => {
+      if (e.persisted) setStatus("idle");
+    };
+    window.addEventListener("pageshow", reset);
+    return () => window.removeEventListener("pageshow", reset);
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
