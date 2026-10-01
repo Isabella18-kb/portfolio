@@ -14,7 +14,7 @@ export const profile = {
   tagline: "Transformo ideas en aplicaciones web funcionales y visualmente cuidadas.",
   // Frase gigante que se revela palabra a palabra al hacer scroll
   manifesto:
-    "Ayudo a empresas a vender y organizarse mejor en internet, creando webs y herramientas digitales hechas a la medida de lo que necesitan.",
+    "Ayudo a empresas a vender y organizarse mejor en internet, creando webs y herramientas digitales adaptadas a las necesidades de cada negocio.",
   about: [
     "Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y trabajo principalmente con Next.js, TypeScript y Supabase. Me ocupo del ciclo completo de una aplicación web: modelado de datos, lógica de negocio, autenticación e interfaces responsivas.",
     "He desarrollado proyectos para negocios reales —un CRM con asistente de IA, una plataforma de captación de clientes y tiendas online—, trabajando con requisitos concretos y usuarios finales. Busco incorporarme a un equipo donde aportar desde el primer día y seguir creciendo profesionalmente.",
