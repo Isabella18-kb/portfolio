@@ -38,7 +38,7 @@ function Objects() {
           ink={palette.cream}
           position={narrow ? [width * 0.25, height * 0.3, -1] : [-2.4 * k, 2.2, -1.5]}
           rotation={[0.7, -0.3, 0.3]}
-          scale={0.8 * s}
+          scale={narrow ? 1.15 * s : 0.8}
           delay={0.35}
         />
       </Float>
