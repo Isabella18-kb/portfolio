@@ -25,7 +25,7 @@ function Objects() {
       <Float speed={2.2} rotationIntensity={1.2} floatIntensity={narrow ? 0.6 : 1.4}>
         <Keycap
           letter="@"
-          position={narrow ? [-width * 0.28, -height * 0.28, 0] : [-4.6 * k, -1.2, 0]}
+          position={narrow ? [-width * 0.28, -height * 0.35, 0] : [-4.6 * k, -1.2, 0]}
           rotation={[0.9, 0.4, -0.3]}
           scale={1.1 * s}
           delay={0.2}
