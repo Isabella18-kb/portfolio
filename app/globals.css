@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
+/* Paleta: borgoña + crema, con café casi negro para el contraste */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #fff4e6;
+  --latte: #be9b7b;
+  --cherry: #854442;
+  --burgundy: #6d0f1f;
+  --wine: #4a0a14;
+  --espresso: #3c2f2f;
+  --ink: #1d1a16;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-latte: var(--latte);
+  --color-cherry: var(--cherry);
+  --color-burgundy: var(--burgundy);
+  --color-wine: var(--wine);
+  --color-espresso: var(--espresso);
+  --color-ink: var(--ink);
+
+  --font-sans: var(--font-archivo);
+  --font-hand: var(--font-caveat);
+  --font-mono: var(--font-jetbrains);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* Proyectos: la mancha que descubre la captura cambia de forma sin parar */
+  --animate-blob: blob 6s ease-in-out infinite;
+
+  @keyframes blob {
+    0%, 100% { border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%; }
+    33% { border-radius: 63% 37% 45% 55% / 58% 62% 38% 42%; }
+    66% { border-radius: 38% 62% 55% 45% / 40% 55% 45% 60%; }
   }
+
+  /* Cintas de habilidades */
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+
+  /* Textos que cambian (nombre del proyecto, pasos del detalle): suben un poco al aparecer */
+  --animate-rise-in: rise-in 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(24px); }
+  }
+
+  /* Cortina del cambio de página (ver PageTransition): entra tapando desde abajo y sale por arriba */
+  --animate-curtain-in: curtain-in 0.6s cubic-bezier(0.7, 0, 0.3, 1) both;
+  --animate-curtain-out: curtain-out 0.6s cubic-bezier(0.7, 0, 0.3, 1) both;
+
+  @keyframes curtain-in {
+    from { clip-path: inset(100% 0 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+
+  @keyframes curtain-out {
+    from { clip-path: inset(0 0 0 0); }
+    to { clip-path: inset(0 0 100% 0); }
+  }
+
+  /* Formulario enviado (ver Contact): el visto bueno se dibuja solo */
+  --animate-draw: draw 0.5s ease-out both;
+
+  @keyframes draw {
+    from { stroke-dashoffset: 1; }
+  }
+
+  /* Indicadores que giran (botón de enviar) */
+  --animate-spin-slow: spin 0.9s linear infinite;
+}
+
+/* Condensada (eje de anchura de Archivo) para los titulares gigantes */
+.font-condensed {
+  font-stretch: 62%;
+  font-variation-settings: "wdth" 62;
+}
+
+html {
+  background: var(--burgundy);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--burgundy);
+  color: var(--cream);
+}
+
+/* Lenis (scroll suave) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--cream);
+  color: var(--burgundy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Las letras no se pueden seleccionar ni sale el cursor de texto encima (tampoco el menú de copiar al
+   mantener pulsado en el móvil): solo en los campos donde se escribe */
+html {
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+input,
+textarea {
+  cursor: text;
+  -webkit-user-select: text;
+  user-select: text;
+}
+a,
+button:not(:disabled),
+label:has(input[type="radio"]) {
+  cursor: pointer;
+}
+
+/* Sin barras de scroll visibles (se sigue pudiendo desplazar con la rueda, el dedo o el teclado) */
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
