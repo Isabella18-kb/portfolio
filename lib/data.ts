@@ -16,8 +16,8 @@ export const profile = {
   manifesto:
     "Transformo las necesidades de cada negocio en soluciones digitales que impulsan sus ventas y simplifican su día a día, creando webs y herramientas a medida.",
   about: [
-    "Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y trabajo principalmente con Next.js, TypeScript y Supabase. Me ocupo del ciclo completo de una aplicación web: modelado de datos, lógica de negocio, autenticación e interfaces responsivas.",
-    "He desarrollado proyectos para negocios reales —un CRM con asistente de IA, una plataforma de captación de clientes y tiendas online—, trabajando con requisitos concretos y usuarios finales. Busco incorporarme a un equipo donde aportar desde el primer día y seguir creciendo profesionalmente.",
+    "Soy desarrolladora web y Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Me encargo de cada proyecto de principio a fin: analizo lo que necesita el negocio, diseño la solución y la desarrollo hasta dejarla publicada y funcionando.",
+    "He trabajado en proyectos reales, como un CRM con asistente de inteligencia artificial, una plataforma de captación de clientes y varias tiendas online. Busco incorporarme a un equipo donde aportar valor desde el primer día y seguir creciendo profesionalmente.",
   ],
   email: "isabellaleon2207@gmail.com",
   facts: [
